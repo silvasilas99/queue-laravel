@@ -20,6 +20,8 @@ class CreateGamesTable extends Migration
             $table->integer('set_in');
             $table->string('protagonist');
             $table->string('location');
+            $table->string('image');
+            $table->string('description');
             $table->timestamps();
         });
     }

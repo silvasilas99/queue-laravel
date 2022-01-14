@@ -20,5 +20,7 @@ class Game extends Model
         'set_in',
         'protagonist',
         'location',
+        'image',
+        'description',
     ];
 }
