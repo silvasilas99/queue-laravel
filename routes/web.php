@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GameController::class, 'index'])->name('index');
+Route::get('/create', [GameController::class, 'create'])->name('create');
+Route::post('/store', [GameController::class, 'store'])->name('store');
+Route::get('/get_csv', [GameController::class, 'getCsvFile'])->name('get_csv');
